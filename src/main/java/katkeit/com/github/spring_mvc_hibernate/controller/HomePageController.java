@@ -1,12 +1,11 @@
 package katkeit.com.github.spring_mvc_hibernate.controller;
 
-import java.time.LocalDateTime;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import katkeit.com.github.spring_mvc_hibernate.model.pages.HomePage;
+import katkeit.com.github.spring_mvc_hibernate.utility.ServerDateTime;
 
 /*
  * author: Katelyn Eitel
@@ -36,8 +35,9 @@ public class HomePageController
 		HomePage homePage = new HomePage();
 		
 		homePage.setMessage("Spring 5 MVC Hibernate Demo - Home Page");
-		homePage.setDateTime(LocalDateTime.now().toString());
-		model.addAttribute("home-page", homePage);
+		homePage.setDate(ServerDateTime.getServerDate());
+		homePage.setTime(ServerDateTime.getServerTime());
+		model.addAttribute("homePage", homePage);
 		
 		return "home-page";
 	}

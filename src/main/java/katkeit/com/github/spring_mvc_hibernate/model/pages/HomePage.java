@@ -20,9 +20,10 @@ package katkeit.com.github.spring_mvc_hibernate.model.pages;
  */
 
 public class HomePage
-{
+{		
 	private String message;
-	private String dateTime;
+	private String date;
+	private String time;
 	
 	public String getMessage() {
 		return message;
@@ -32,11 +33,19 @@ public class HomePage
 		this.message = message;
 	}
 	
-	public String getDateTime() {
-		return dateTime;
+	public String getDate() {
+		return date;
 	}
 	
-	public void setDateTime(String dateTime) {
-		this.dateTime = dateTime;
+	public void setDate(String date) {
+		this.date = date;
+	}
+	
+	public String getTime() {
+		return time;
+	}
+	
+	public void setTime(String time) {
+		this.time = time;
 	}
 }
