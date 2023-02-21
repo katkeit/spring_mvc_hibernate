@@ -2,9 +2,9 @@ package katkeit.com.github.spring_mvc_hibernate.model.entity.account;
 
 import java.util.HashMap;
 
-import org.hibernate.validator.constraints.Range;
+import javax.validation.constraints.NotNull;
 
-import jakarta.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Range;
 
 /*
  * author: Katelyn Eitel
