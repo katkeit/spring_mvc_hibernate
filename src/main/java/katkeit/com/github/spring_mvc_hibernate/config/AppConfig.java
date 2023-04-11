@@ -60,7 +60,6 @@ public class AppConfig implements WebMvcConfigurer
 		resolver.setViewClass(JstlView.class);
 		resolver.setPrefix("/WEB-INF/view/");
 		resolver.setSuffix(".jsp");
-		resolver.setExposeContextBeansAsAttributes(true);
 		
 		return resolver;
 	}
@@ -84,7 +83,7 @@ public class AppConfig implements WebMvcConfigurer
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry)
 	{
-		registry.addResourceHandler("/static/**")
-			.addResourceLocations("/resources/static/");
+		registry.addResourceHandler("/resources/**")
+			.addResourceLocations("/WEB-INF/resources/");
 	}
 }

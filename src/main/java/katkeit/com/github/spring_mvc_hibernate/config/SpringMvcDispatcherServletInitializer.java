@@ -50,6 +50,6 @@ public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationCon
 	@Override
 	protected String[] getServletMappings()
 	{
-		return new String[] { "/spring_mvc_hibernate" };
+		return new String[] { "/" };
 	}
 }
