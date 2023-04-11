@@ -4,9 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountCreation;
 import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountLogin;
-import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountRecovery;
 
 /*
  * author: Katelyn Eitel
@@ -28,17 +26,16 @@ import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountRecov
  */
 
 @Controller
-@RequestMapping("login")
 public class LoginController
 {
-	@RequestMapping("/")
+	@RequestMapping("login")
 	public String login(Model model)
 	{
 		model.addAttribute("accountLogin", new AccountLogin());
 		return "login-page";
 	}
 	
-	@RequestMapping("/register")
+	/*@RequestMapping("/register")
 	public String register(Model model)
 	{
 		model.addAttribute("accountCreation", new AccountCreation());
@@ -50,5 +47,5 @@ public class LoginController
 	{
 		model.addAttribute("accountRecovery", new AccountRecovery());
 		return "account-recovery-page";
-	}
+	}*/
 }

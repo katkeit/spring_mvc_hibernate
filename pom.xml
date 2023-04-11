@@ -80,6 +80,22 @@
 		    <artifactId>bootstrap</artifactId>
 		    <version>5.2.3</version>
 		</dependency>-->
+		
+		<!-- Junit Jupiter API -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.9.2</version>
+		    <scope>test</scope>
+		</dependency>
+
+		<!-- Spring Boot Starter Test -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-test</artifactId>
+		    <version>3.0.2</version>
+		    <scope>test</scope>
+		</dependency>
      </dependencies>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
