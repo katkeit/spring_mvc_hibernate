@@ -18,11 +18,17 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+[![Build][build-shield]][build-url]
+[![Coverage][coverage-shield]][coverage-url]
+[![Apache-2.0 License][license-shield]][license-url]
+[![Issues][issues-shield]][issues-url]
+![Size][size-shield]
+<br>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
+![Commits][commit-shield]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Apache-2.0 License][license-shield]][license-url]
+<br>
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -92,15 +98,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 ### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Spring][Spring.io]][Spring-url]
+* [![Hibernate][Hibernate.org]][Hibernate-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -216,32 +215,36 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- IMPORTANT BADGES -->
+[build-shield]: https://img.shields.io/github/actions/workflow/status/katkeit/spring_mvc_hibernate/maven.yml?style=for-the-badge
+[build-url]: https://github.com/katkeit/spring_mvc_hibernate/actions/workflows/maven.yml
+[coverage-shield]: https://img.shields.io/codacy/coverage/6eef8039fda14534817d08e8b0c99b0d?style=for-the-badge
+[coverage-url]: https://app.codacy.com/gh/katkeit/spring_mvc_hibernate/dashboard?branch=main
+[license-shield]: https://img.shields.io/github/license/katkeit/spring_mvc_hibernate.svg?style=for-the-badge
+[license-url]: https://github.com/katkeit/spring_mvc_hibernate/blob/main/LICENSE
+[issues-shield]: https://img.shields.io/github/issues/katkeit/spring_mvc_hibernate.svg?style=for-the-badge
+[issues-url]: https://github.com/katkeit/spring_mvc_hibernate/issues
+[size-shield]: https://img.shields.io/github/repo-size/katkeit/spring_mvc_hibernate?style=for-the-badge
+<!-- ADDITIONAL BADGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/katkeit/spring_mvc_hibernate.svg?style=for-the-badge
 [contributors-url]: https://github.com/katkeit/spring_mvc_hibernate/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/katkeit/spring_mvc_hibernate.svg?style=for-the-badge
 [forks-url]: https://github.com/katkeit/spring_mvc_hibernate/network/members
+[commit-shield]: https://img.shields.io/github/last-commit/katkeit/spring_mvc_hibernate?style=for-the-badge
 [stars-shield]: https://img.shields.io/github/stars/katkeit/spring_mvc_hibernate.svg?style=for-the-badge
 [stars-url]: https://github.com/katkeit/spring_mvc_hibernate/stargazers
-[issues-shield]: https://img.shields.io/github/issues/katkeit/spring_mvc_hibernate.svg?style=for-the-badge
-[issues-url]: https://github.com/katkeit/spring_mvc_hibernate/issues
-[license-shield]: https://img.shields.io/github/license/katkeit/spring_mvc_hibernate?style=for-the-badge
-[license-url]: https://github.com/katkeit/spring_mvc_hibernate/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/katelyn-eitel
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
+<!-- FRAMEWORK/LIBRARY BADGES -->
+[Spring.io]: https://img.shields.io/badge/spring.io-white?style=for-the-badge&logo=spring&logoColor=green
+[Spring-url]: https://spring.io/
+[Hibernate.org]: https://img.shields.io/badge/hibernate.org-gray?style=for-the-badge&logo=hibernate&logoColor=tan
+[Hibernate-url]: https://hibernate.org/
+[ProjectLombok.org]: https://img.shields.io/badge/projectlombok.org-E32227?style=for-the-badge&logo=lombok&logoColor=white
+[ProjectLombok-url]: https://projectlombok.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
+[JQuery-url]: https://jquery.com 
+<!-- SOCIAL/WEBSITE/OTHER BADGES -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/katelyn-eitel
+[product-screenshot]: images/screenshot.png
