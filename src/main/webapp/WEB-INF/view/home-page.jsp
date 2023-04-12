@@ -1,5 +1,5 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="jakarta.tags.core" prefix="c"%>
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
@@ -11,7 +11,7 @@
 		<!-- Google API - Noto Sans font -->
 		<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 			
 		<!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
 		<link href = "${contextPath}/resources/static/css/main.css" type = "text/css" rel = "stylesheet">

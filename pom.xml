@@ -6,97 +6,96 @@
   <packaging>war</packaging>
   
   <properties>
-	  <java.version>11</java.version>
-      <failOnMissingWebXml>false</failOnMissingWebXml>
+	  <java.version>17</java.version>
    </properties>
   
   <dependencies>
         <!-- Spring Web MVC -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>5.1.0.RELEASE</version>
-        </dependency>
-
-         <!-- JSTL Dependency -->
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-            <version>1.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-
-        <!-- Servlet Dependency -->
-        <dependency>
-             <groupId>javax.servlet</groupId>
-             <artifactId>javax.servlet-api</artifactId>
-             <version>3.1.0</version>
-             <scope>provided</scope>
-        </dependency>
-
-        <!-- JSP Dependency -->
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-            <version>2.3.1</version>
-            <scope>provided</scope>
-        </dependency>
-               
-        <!-- Javax Validation API -->
-		<dependency>
-		    <groupId>javax.validation</groupId>
-		    <artifactId>validation-api</artifactId>
-		    <version>2.0.1.Final</version>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc</artifactId>
+		    <version>6.0.7</version>
 		</dependency>
-        
-        <!-- Hibernate Validator -->
+		<!-- Jakarta Servlet -->
 		<dependency>
-		    <groupId>org.hibernate.validator</groupId>
-		    <artifactId>hibernate-validator</artifactId>
-		    <version>6.2.5.Final</version>
+	        <groupId>jakarta.servlet</groupId>
+	        <artifactId>jakarta.servlet-api</artifactId>
+	        <version>6.0.0</version>
+	        <scope>provided</scope>
+    	</dependency>
+    	<!-- Jakarta Servlet JSP -->
+	    <dependency>
+	        <groupId>jakarta.servlet.jsp</groupId>
+	        <artifactId>jakarta.servlet.jsp-api</artifactId>
+	        <version>3.1.1</version>
+	        <scope>provided</scope>
+	    </dependency>
+	    <!-- Jakarta Express Language -->
+	    <dependency>
+	        <groupId>jakarta.el</groupId>
+	        <artifactId>jakarta.el-api</artifactId>
+	        <version>5.0.1</version>
+	        <scope>provided</scope>
+	    </dependency>
+	    <!-- Jakarta Websocket API -->
+	    <dependency>
+	        <groupId>jakarta.websocket</groupId>
+	        <artifactId>jakarta.websocket-api</artifactId>
+	        <version>2.1.0</version>
+	        <scope>provided</scope>
+	    </dependency>
+	    <!-- Jakarta Security Enterprise -->
+	    <dependency>
+	        <groupId>jakarta.security.enterprise</groupId>
+	        <artifactId>jakarta.security.enterprise-api</artifactId>
+	        <version>3.0.0</version>
+	        <scope>provided</scope>
+	    </dependency>
+         <!-- Jakarta Standard Tag Library API -->
+        <dependency>
+		    <groupId>jakarta.servlet.jsp.jstl</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		    <version>3.0.0</version>
 		</dependency>
-		
-		<!-- Jakarta Validation 
+        <!-- Jakarta Bean Validation API -->
 		<dependency>
 		    <groupId>jakarta.validation</groupId>
 		    <artifactId>jakarta.validation-api</artifactId>
 		    <version>3.0.2</version>
-		</dependency>-->
-
+		</dependency>
+		<!-- Jakarta Annotation -->
+		<dependency>
+		    <groupId>jakarta.annotation</groupId>
+		    <artifactId>jakarta.annotation-api</artifactId>
+		    <version>2.1.1</version>
+		</dependency>
+        <!-- Hibernate Validator -->
+		<dependency>
+		    <groupId>org.hibernate.validator</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>8.0.0.Final</version>
+		</dependency>
 		<!-- MSSQL JDBC -->
 		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-    		<artifactId>mssql-jdbc</artifactId>
-    		<version>12.2.0.jre11</version>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>11.2.3.jre17</version>
+		</dependency>
+		<!-- Lombok -->
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.26</version>
+		    <scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.glassfish.web</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		    <version>3.0.1</version>
 		</dependency>
 
-		<!-- Bootstrap 
-		<dependency>
-		    <groupId>org.webjars</groupId>
-		    <artifactId>bootstrap</artifactId>
-		    <version>5.2.3</version>
-		</dependency>-->
-		
-		<!-- Junit Jupiter API -->
-		<dependency>
-		    <groupId>org.junit.jupiter</groupId>
-		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>5.9.2</version>
-		    <scope>test</scope>
-		</dependency>
-
-		<!-- Spring Boot Starter Test -->
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-test</artifactId>
-		    <version>3.0.2</version>
-		    <scope>test</scope>
-		</dependency>
      </dependencies>
+     
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
