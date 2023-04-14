@@ -1,160 +1,29 @@
 @charset "ISO-8859-1";
 
- /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px)
+body
 {
-	html
-	{
-		font-size: 15px;
-	}
-	
-	nav
-	{
-		height: 100%;
-		width: 100%;
-		display: block;
-	}
-	
-	nav a
-	{
-		height: 100%;
-		display: block;
-		overflow: hidden;
-	  	padding: 15px;       
-	}
+	padding-top: 59.5px;	
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px)
+.offcanvas-title
 {
-	html
-	{
-		font-size: 15px;
-	}
-	
-	nav
-	{
-		height: 100%;
-		width: 100%;
-		display: block;
-	}
-	
-	nav a
-	{
-		height: 100%;
-		display: block;
-		overflow: hidden;
-	  	padding: 15px;
-	}
+	padding-left: 20%;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px)
+.nav-link
 {
-	html
-	{
-		font-size: 15px;
-	}
-	
-	nav
-	{
-		height: 100%;
-		width: 100%;
-		display: block;
-	}
-	
-	nav a
-	{
-		height: 100%;
-		width: 100%;
-		display: inline;
-		overflow: hidden;
-		padding: 0px;
-	}
+	font-size: 20px;
+	display: inline-block;
+	padding: 10px;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px)
+footer
 {
-	html
-	{
-		font-size: 25px;
-	}
-	
-	nav
-	{
-		height: 100%;
-		display: block;
-		padding: 25px;
-	}
-	
-	nav a
-	{
-		height: 100%;
-		display: inline;
-		overflow: hidden;
-	  	padding: 25px;
-	}
+	height: 100%;
+	background-color: #FFCCCC; /* PINKS: #EFBFBF, #FFCCCC  BLUES: #E5EFF9 */
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px)
+.serverTime
 {
-	html
-	{
-		font-size: 25px;
-	}
-	
-	nav
-	{
-		height: 100%;
-		display: block;
-		padding: 25px;
-	}
-	
-	nav a
-	{
-		height: 100%;
-		display: inline;
-		overflow: hidden;
-	  	padding: 25px;
-	}
-} 
-
-html
-{
-	font-family: Noto Sans, Tahoma, Verdana, sans-serif;
-}
-
-nav
-{
-	background-color: #333;
-}
-
-nav a
-{
-	background-color: #333;	
-	color: white;
-	text-align: center;
-  	text-decoration: none;	
-}
-
-nav a:hover
-{
-	color: gold;
-	background-color: #111;
-}
-
-nav .nav-active
-{
-	color: gold;
-	background-color: #111;
-}
-
-.footer
-{
-	color: white;
-	background-color: #333;
-	padding: 20px;
-	margin: 0px;
+	padding: 10px;
 }

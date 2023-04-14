@@ -6,20 +6,20 @@
 		<meta charset="ISO-8859-1">	
 		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">		
 		
+		<!-- Variables -->
 		<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 		
 		<!-- Google API - Noto Sans font -->
-		<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
 		<!-- Bootstrap v5.3 -->
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
    		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
    		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-   		
-   		
+   		<!-- Custom CSS -->
+   		<link href = "${contextPath}/resources/static/css/main.css" rel = "stylesheet">
 
 		<title>Home Page</title>
 	</head>
-	
 	<header>
 		<nav class = "navbar fixed-top bg-body-tertiary">
 			<div class = "container-fluid">
@@ -32,23 +32,22 @@
 				</a>
 				<div class = "offcanvas offcanvas-start" tabindex="-1" id="navigationBar" aria-labelledby="navigationBarTitle">
 					<div class = "offcanvas-header">
-						<img src = "${contextPath}/resources/static/images/icons/celtic-knot.ico" alt = "companyLogo" width = "32" height = "32" class = "d-inline-block align-text-top">
-						<h5 class = "offcanvas-title" id = "navigationBarTitle">Company Name</h5>
+						
+						<h5 class = "offcanvas-title" id = "navigationBarTitle"><img src = "${contextPath}/resources/static/images/icons/celtic-knot.ico" alt = "companyLogo" width = "32" height = "32"> Company Name</h5>
 						<button type = "button" class = "btn-close" data-bs-dismiss = "offcanvas" aria-label = "Close"></button>
 					</div>
 					<div class = "offcanvas-body">
 						<div class = "navbar-nav">
-							<a class = "nav-link active" href = "/spring_mvc_hibernate">Home</a>
-							<img src = "${contextPath}/resources/static/images/icons/log-in.ico" alt = "loginLogo" width = "24" height = "24" class = "img-fluid float-start"><a class = "nav-link" href = "login/">Login</a>
-							<a class = "nav-link" href = "register/">Register</a>
-							<a class = "nav-link" href = "support/">Support</a>
+							<a class = "nav-link active" href = "/spring_mvc_hibernate"><img src="${contextPath}/resources/static/images/icons/navigation/house.svg" class = "nav-icons" alt="homeIcon" width="20" height="20"> Home</a>
+							<a class = "nav-link" href = "login"><img src = "${contextPath}/resources/static/images/icons/navigation/login.svg" class = "nav-icons" alt = "loginLogo" width = "20" height = "20"> Login</a>
+							<a class = "nav-link" href = "register"><img src = "${contextPath}/resources/static/images//icons/navigation/user.svg" class = "nav-icons" alt = "registerLogo" width = "20" height = "20"> Register</a>
+							<a class = "nav-link" href = "support/"><img src = "${contextPath}/resources/static/images/icons/navigation/help-circle.svg" class = "nav-icons" alt = "supportLogo" width = "20" height = "20"> Support</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
 	</header>
-	
 	<body>
 		<!-- Carousel Container -->
 		<div id = "carouselContainer" class = "carousel slide carousel-fade">
@@ -60,28 +59,28 @@
 			</div>
 			<div class = "carousel-inner">
 				<div class = "carousel-item active">
-					<img src="${contextPath}/resources/static/images/Boy-Fishing-Lake-Mountain-Afternoon.jpg" class = "d-block w-100">
+					<img src="${contextPath}/resources/static/images/locations/Boy-Fishing-Lake-Mountain-Afternoon.jpg" class = "d-block w-100">
 					<div class = "carousel-caption d-none d-md-block">
 						<h5>First Label</h5>
 						<p>Some representative placeholder content for the first slide.</p>
 					</div>
 				</div>
 				<div class = "carousel-item">
-					<img src="${contextPath}/resources/static/images/Buck-Lake-Mountain-Overlook-Sunset.jpg" class = "d-block w-100">
+					<img src="${contextPath}/resources/static/images/locations/Buck-Lake-Mountain-Overlook-Sunset.jpg" class = "d-block w-100">
 					<div class = "carousel-caption d-none d-md-block">
 						<h5>Second Label</h5>
 						<p>Some representative placeholder content for the second slide.</p>
 					</div>
 				</div>
 				<div class = "carousel-item">
-					<img src="${contextPath}/resources/static/images/Fox-Cave-Mountain-Sunset.jpg" class = "d-block w-100">
+					<img src="${contextPath}/resources/static/images/locations/Fox-Cave-Mountain-Sunset.jpg" class = "d-block w-100">
 					<div class = "carousel-caption d-none d-md-block">
 						<h5>Third Label</h5>
 						<p>Some representative placeholder content for the third slide.</p>
 					</div>
 				</div>
 				<div class = "carousel-item">
-					<img src="${contextPath}/resources/static/images/Horizon-Forest-Lake-Mountains-Spring.jpg" class = "d-block w-100">
+					<img src="${contextPath}/resources/static/images/locations/Horizon-Forest-Lake-Mountains-Spring.jpg" class = "d-block w-100">
 					<div class = "carousel-caption d-none d-md-block">
 						<h5>Fourth Label</h5>
 						<p>Some representative placeholder content for the fourth slide.</p>
@@ -109,13 +108,12 @@
 			<p>Allow miles wound place the leave had. To sitting subject no improve studied limited. Ye indulgence unreserved connection alteration appearance my an astonished. Up as seen sent make he they of. Her raising and himself pasture believe females. Fancy she stuff after aware merit small his. Charmed esteems luckily age out.</p> 	
 		</div>
 	</body>
-	
 	<footer>
-		<div class = "container-fluid">
-			<div class = "rgba(var(--bs-body-color-rgb), .5) #EFBFBF">
-				<b>Server Time</b><br>
-				<b>${homePage.time}</b><br>
-				${homePage.date}
+		<div class = "container-fluid p-5">
+			<div >
+				<img src = "${contextPath}/resources/static/images/icons/footer/clock.svg"><b> Server Time</b><br>
+				<b>${homePage.time} </b><img src = "${contextPath}/resources/static/images/icons/footer/sun.svg" height = "20" width = "20"> / <img src = "${contextPath}/resources/static/images/icons/footer/moon.svg"><br>
+				${homePage.date} &e47b;
 			</div>
 		</div>
 	</footer>
