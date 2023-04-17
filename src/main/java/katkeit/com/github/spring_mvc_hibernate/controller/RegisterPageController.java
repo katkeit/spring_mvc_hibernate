@@ -4,12 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountLogin;
+import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountCreation;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13 
+ * date: 2023-04-17
  *
  * license: Apache License 2.0
  * description:
@@ -26,19 +26,12 @@ import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountLogin
  */
 
 @Controller
-public class LoginController
+public class RegisterPageController
 {
-	@RequestMapping("login")
-	public String login(Model model)
+	@RequestMapping("register")
+	public String register(Model model)
 	{
-		model.addAttribute("accountLogin", new AccountLogin());
-		return "login-page";
+		model.addAttribute("accountCreation", new AccountCreation());
+		return "register-page";
 	}
-	
-	/*@RequestMapping("/recovery")
-	public String accountRecovery(Model model)
-	{
-		model.addAttribute("accountRecovery", new AccountRecovery());
-		return "account-recovery-page";
-	}*/
 }
