@@ -1,15 +1,9 @@
-package katkeit.com.github.spring_mvc_hibernate.controller;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountLogin;
+package katkeit.com.github.spring_mvc_hibernate.model.pages;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13 
+ * date: 2023-04-17
  *
  * license: Apache License 2.0
  * description:
@@ -25,20 +19,7 @@ import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountLogin
  *		limitations under the License.
  */
 
-@Controller
-public class LoginController
+public class RegisterPage
 {
-	@RequestMapping("login")
-	public String login(Model model)
-	{
-		model.addAttribute("accountLogin", new AccountLogin());
-		return "login-page";
-	}
-	
-	/*@RequestMapping("/recovery")
-	public String accountRecovery(Model model)
-	{
-		model.addAttribute("accountRecovery", new AccountRecovery());
-		return "account-recovery-page";
-	}*/
+
 }

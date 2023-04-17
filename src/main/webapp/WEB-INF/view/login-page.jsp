@@ -38,29 +38,45 @@
 					</div>
 					<div class = "offcanvas-body">
 						<div class = "navbar-nav">
-							<a class = "nav-link active" href = "/spring_mvc_hibernate"><img src="${contextPath}/resources/static/images/icons/house.svg" class = "nav-icons" alt="homeIcon" width="20" height="20"> Home</a>
-							<a class = "nav-link" href = "login"><img src = "${contextPath}/resources/static/images/icons/login.svg" class = "nav-icons" alt = "loginLogo" width = "20" height = "20"> Login</a>
-							<a class = "nav-link" href = "register"><img src = "${contextPath}/resources/static/images/icons/user.svg" class = "nav-icons" alt = "registerLogo" width = "20" height = "20"> Register</a>
-							<a class = "nav-link" href = "support/"><img src = "${contextPath}/resources/static/images/icons/help-circle.svg" class = "nav-icons" alt = "supportLogo" width = "20" height = "20"> Support</a>
+							<a class = "nav-link" href = "/spring_mvc_hibernate"><img src="${contextPath}/resources/static/images/icons/navigation/house.svg" class = "nav-icons" alt="homeIcon" width="20" height="20"> Home</a>
+							<a class = "nav-link active" href = "login"><img src = "${contextPath}/resources/static/images/icons/navigation/login.svg" class = "nav-icons" alt = "loginLogo" width = "20" height = "20"> Login</a>
+							<a class = "nav-link" href = "register"><img src = "${contextPath}/resources/static/images//icons/navigation/user.svg" class = "nav-icons" alt = "registerLogo" width = "20" height = "20"> Register</a>
+							<a class = "nav-link" href = "support/"><img src = "${contextPath}/resources/static/images/icons/navigation/help-circle.svg" class = "nav-icons" alt = "supportLogo" width = "20" height = "20"> Support</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</nav>	
+		</nav>
 	</header>
 	<body>
-		<h3>Login</h3>
-		<form action = "verify" method = "GET">
-			<input type = "text" name = "username"/>
-			<input type = "password" name = "password"/>
-			<input type = "submit"/>
+		<form action = "verify" method = "GET" class = "p-5">
+			<h3>Login</h3>
+			<div class = "mb-3">
+				<label for = "labelUsername" class = "form-label">Username</label>
+				<input type = "text" name = "username" class = "form-control" id = "labelUsername" aria-describedby = "usernameParameters"/>
+				<div id = "usernameParameters" class = "form-text">The length must be between 4 to 16 characters long, contain one lower and upper case character, and can have any numbers between 0-9.</div>
+			</div>
+			<div class = "mb-3">
+				<label for = "labelPassword" class = "form-label">Password</label>
+				<input type = "password" name = "password" class = "form-control" id = "labelPassword" aria-describedby = "passwordParameters"/>
+				<div id = "passwordParameters" class = "form-text">The length must be between 8 to 32 characters long, have one lower and upper case character, one number between 0-9, and one special character. Allowed: !#$%+-?@^_|~</div>
+			</div>
+			<div class = "mb-3 form-check">
+				<input type = "checkbox" class = "form-check-input" id = "tosCheckbox">
+				<label class = "form-check-label" for = "tosCheckbox">Terms of Service</label>
+			</div>
+			<div class = "mb-3 form-check">
+				<input type = "checkbox" class = "form-check-input" id = "isHumanCheckbox">
+				<label class = "form-check-label" for = "isHumanCheckbox">Human Verification</label>
+			</div>
+			<button type = "login" class = "btn btn-primary">Login</button>
 		</form><br>
 	</body>
 	<footer>
 		<div class = "container-fluid p-5">
 			<div >
-				<b>Server Time</b><br>
-				<b>${homePage.time}</b><br>
+				<img src = "${contextPath}/resources/static/images/icons/footer/clock.svg"><b> Server Time</b><br>
+				<b>${homePage.time} </b><img src = "${contextPath}/resources/static/images/icons/footer/sun.svg" height = "20" width = "20"> / <img src = "${contextPath}/resources/static/images/icons/footer/moon.svg"><br>
 				${homePage.date}
 			</div>
 		</div>

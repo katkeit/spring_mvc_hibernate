@@ -18,7 +18,7 @@
    		<!-- Custom CSS -->
    		<link href = "${contextPath}/resources/static/css/main.css" rel = "stylesheet">
 
-		<title>Home Page</title>
+		<title>Home</title>
 	</head>
 	<header>
 		<nav class = "navbar fixed-top bg-body-tertiary">
@@ -113,7 +113,7 @@
 			<div >
 				<img src = "${contextPath}/resources/static/images/icons/footer/clock.svg"><b> Server Time</b><br>
 				<b>${homePage.time} </b><img src = "${contextPath}/resources/static/images/icons/footer/sun.svg" height = "20" width = "20"> / <img src = "${contextPath}/resources/static/images/icons/footer/moon.svg"><br>
-				${homePage.date} &e47b;
+				${homePage.date}
 			</div>
 		</div>
 	</footer>
