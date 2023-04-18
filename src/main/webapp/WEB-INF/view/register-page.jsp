@@ -49,7 +49,59 @@
 		</nav>
 	</header>
 	<body>
-	
+		<form action = "verify" method = "GET" class = "p-5">
+			<h3>Register</h3>
+			<div class = "mb-3">
+				<label for = "labelUsername" class = "form-label">Username</label>
+				<input type = "text" name = "username" class = "form-control" id = "labelUsername" aria-describedby = "usernameParameters"/>
+				<div id = "usernameParameters" class = "form-text">The length must be between 4 to 16 characters long, contain one lower and upper case character, and can have any numbers between 0-9.</div>
+			</div>
+			<div class = "mb-3">
+				<label for = "labelDisplayName" class = "form-label">Display Name</label>
+				<input type = "text" name = "displayName" class = "form-control" id = "labelDisplayName" aria-describedby = "displayNameParameters"/>
+				<div id = "displayNameParameters" class = "form-text">The length must be between 2 to 16 characters long.</div>
+			</div>
+			<div class = "mb-3">
+				<label for = "labelPassword" class = "form-label">Password</label>
+				<input type = "password" name = "password" class = "form-control" id = "labelPassword" aria-describedby = "passwordParameters"/>
+				<div id = "passwordParameters" class = "form-text">The length must be between 8 to 32 characters long, have one lower and upper case character, one number between 0-9, and one special character. Allowed: !#$%+-?@^_|~</div>
+			</div>
+			<div class = "mb-3">
+				<label for = "labelReEnterPassword" class = "form-label">Re-Enter Password</label>
+				<input type = "password" name = "reEnterPassword" class = "form-control" id = "labelReEnterPassword"/>
+			</div>
+			<div class = "mb-3">
+				<label for = "labelEmail" class = "form-label">Email</label>
+				<input type = "email" name = "email" class = "form-control" id = "labelEmail" aria-describedby = "emailParameters"/>
+				<div id = "emailParameters" class = "form-text">Everything before the "@" must be between 2 to 64 characters long.</div>
+			</div>
+			<div class = "mb-3">
+				<label for = "labelFirstName" class = "form-label">First Name</label>
+				<input type = "text" name = "firstName" class = "form-control" id = "labelFirstName" aria-describedby = "firstNameParameters"/>
+				<div id = "firstNameParameters" class = "form-text">The length must be between 1 to 25 characters long.</div>
+			</div>
+			<div class = "mb-3">
+				<label for = "labelLastName" class = "form-label">Last Name</label>
+				<input type = "text" name = "lastName" class = "form-control" id = "labelLastName" aria-describedby = "lastNameParameters"/>
+				<div id = "lastNameParameters" class = "form-text">The length must be between 1 to 25 characters long.</div>
+			</div>
+			<div class = "input-group mb-3">
+				<label class = "input-group-text" for = "monthOptions">Birth Month</label>
+				<select class = "form-select" id = "monthOptions">
+					<option selected>Choose...</option>
+					<option value = "1">${accountCreation.monthOptions[0]}</option>
+				</select>
+			</div>
+			<div class = "mb-3 form-check">
+				<input type = "checkbox" class = "form-check-input" id = "tosCheckbox">
+				<label class = "form-check-label" for = "tosCheckbox">Terms of Service</label>
+			</div>
+			<div class = "mb-3 form-check">
+				<input type = "checkbox" class = "form-check-input" id = "isHumanCheckbox">
+				<label class = "form-check-label" for = "isHumanCheckbox">Human Verification</label>
+			</div>
+			<button type = "create" class = "btn btn-primary">Create</button>
+		</form><br>
 	</body>
 	<footer>
 		<div class = "container-fluid p-5">
