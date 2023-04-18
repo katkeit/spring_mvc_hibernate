@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+
+body
+{
+	padding-top: 59.5px;	
+}
+
+.offcanvas-title
+{
+	padding-left: 20%;
+}
+
+.nav-link
+{
+	font-size: 20px;
+	display: inline-block;
+	padding: 10px;
+}
+
+footer
+{
+	height: 100%;
+	background-color: #FFCCCC; /* PINKS: #EFBFBF, #FFCCCC  BLUES: #E5EFF9 */
+}
+
+.serverTime
+{
+	padding: 10px;
+}

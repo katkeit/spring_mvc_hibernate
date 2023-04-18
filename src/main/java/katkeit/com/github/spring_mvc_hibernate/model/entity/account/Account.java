@@ -8,6 +8,9 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import lombok.Getter;
+import lombok.Setter;
+
 
 /*
  * author: Katelyn Eitel
@@ -28,6 +31,7 @@ import jakarta.validation.constraints.Pattern;
  *		limitations under the License.
  */
 
+@Getter @Setter
 public abstract class Account
 {
 	@NotNull
@@ -104,61 +108,5 @@ public abstract class Account
 		dayOptions.put("October", monthDays31);
 		dayOptions.put("November", monthDays30);
 		dayOptions.put("December", monthDays31);
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Integer getBirthMonth() {
-		return birthMonth;
-	}
-
-	public void setBirthMonth(Integer birthMonth) {
-		this.birthMonth = birthMonth;
-	}
-
-	public Integer getBirthDay() {
-		return birthDay;
-	}
-
-	public void setBirthDay(Integer birthDay) {
-		this.birthDay = birthDay;
-	}
-
-	public Boolean getIsHuman() {
-		return isHuman;
-	}
-
-	public void setIsHuman(Boolean isHuman) {
-		this.isHuman = isHuman;
-	}
-
-	public HashMap<Integer, String> getMonthOptions() {
-		return monthOptions;
-	}
-
-	public HashMap<String, Integer[]> getDayOptions() {
-		return dayOptions;
 	}
 }
