@@ -5,6 +5,8 @@ import java.util.HashMap;
 import org.hibernate.validator.constraints.Range;
 
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 /*
  * author: Katelyn Eitel
@@ -27,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *		limitations under the License.
  */
 
+@Getter @Setter
 public class AccountCreation extends Account
 {
 	// username
@@ -49,111 +52,15 @@ public class AccountCreation extends Account
 	
 	// birthMonth
 	// birthDay
+	
+	private boolean privacyPolicyChecked;
+	private boolean tosChecked;
+	private boolean eulaChecked;
+	
 	//isHuman
 	
 	public AccountCreation()
 	{
 		super();
-	}
-	
-	@Override
-	public String getUsername() {
-		return super.getUsername();
-	}
-	
-	@Override
-	public void setUsername(String username) {
-		super.setUsername(username);
-	}
-	
-	public String getDisplayName() {
-		return displayName;
-	}
-
-	public void setDisplayName(String displayName) {
-		this.displayName = displayName;
-	}
-
-	@Override
-	public String getPassword() {
-		return super.getPassword();
-	}
-	
-	@Override
-	public void setPassword(String password) {
-		super.setPassword(password);
-	}
-	
-	public String getReEnterPassword() {
-		return reEnterPassword;
-	}
-
-	public void setReEnterPassword(String reEnterPassword) {
-		this.reEnterPassword = reEnterPassword;
-	}
-
-	@Override
-	public String getEmail() {
-		return super.getEmail();
-	}
-	
-	@Override
-	public void setEmail(String email) {
-		super.setEmail(email);
-	}
-	
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	@Override
-	public Integer getBirthMonth() {
-		return super.getBirthMonth();
-	}
-	
-	@Override
-	public void setBirthMonth(Integer birthMonth) {
-		super.setBirthMonth(birthMonth);
-	}
-	
-	@Override
-	public Integer getBirthDay() {
-		return super.getBirthDay();
-	}
-	
-	@Override
-	public void setBirthDay(Integer birthDay) {
-		super.setBirthDay(birthDay);
-	}
-	@Override
-	public Boolean getIsHuman() {
-		return super.getIsHuman();
-	}
-	
-	@Override
-	public void setIsHuman(Boolean isHuman) {
-		super.setIsHuman(isHuman);
-	}
-	
-	@Override
-	public HashMap<Integer, String> getMonthOptions() {
-		return super.getMonthOptions();
-	}
-	
-	@Override
-	public HashMap<String, Integer[]> getDayOptions() {
-		return super.getDayOptions();
 	}
 }
