@@ -1,15 +1,15 @@
-package katkeit.com.github.spring_mvc_hibernate.controller;
+package katkeit.com.github.spring_mvc_hibernate.model.entity.account.support;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import java.awt.Image;
 
-import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountCreation;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-04-17
+ * date: 2023-05-23
  *
  * license: Apache License 2.0
  * description:
@@ -25,13 +25,21 @@ import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountCreat
  *		limitations under the License.
  */
 
-@Controller
-public class RegisterPageController
+@Getter @Setter
+public class SupportTicket extends Ticket
 {
-	@RequestMapping("register")
-	public String register(Model model)
-	{
-		model.addAttribute("accountCreation", new AccountCreation());
-		return "register-page";
-	}
+	// ticketID
+	// username
+	// email
+	// product
+	
+	@NotNull
+	protected String issueCategory;
+	
+	@NotNull
+	protected String issueType;
+	
+	// message
+	
+	protected Image image;
 }

@@ -1,18 +1,18 @@
-package katkeit.com.github.spring_mvc_hibernate.model.entity.account;
+package katkeit.com.github.spring_mvc_hibernate.model.entity.account.support;
 
 import org.hibernate.validator.constraints.Range;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13
- *
- * github: 
+ * date: 2023-05-23
  *
  * license: Apache License 2.0
  * description:
@@ -28,33 +28,27 @@ import lombok.Setter;
  *		limitations under the License.
  */
 
-@Getter @Setter @NoArgsConstructor
-public class AccountCreation extends Account
+@Getter @Setter
+public abstract class Ticket
 {
-	// username
-	
-	@Range(min = 2, max = 16, message = "Doesn't meet the length requirement. Length: 2-16")
-	private String displayName;
-	
-	//password
+	/* EXAMPLE: 202305SUN01 */
+	@NotNull
+	@Pattern(regexp = "[a-zA-Z0-9]")
+	protected String ticketID;
 	
 	@NotNull
-	private String reEnterPassword;
+	@Min(value = 4, message = "Doesn't meet the minimum length requirement.")
+	@Max(value = 16, message = "Exceeds the maximum length requirement.")
+	@Pattern(regexp = "[a-zA-Z0-9]")
+	protected String username;
 	
-	// email
+	@NotNull
+	@Range(min = 2, max = 64, message = "Doesn't meet the length requirement. Length: 2-64")
+	protected String email;
 	
-	@Range(min = 1, max = 25, message = "Doesn't meet the length requirement. Length: 1-25")
-	private String firstName;
+	@NotNull
+	protected String product;
 	
-	@Range(min = 1, max = 25, message = "Doesn't meet the length requirement. Length: 1-25")
-	private String lastName;
-	
-	// birthMonth
-	// birthDay
-	
-	private boolean privacyPolicyChecked;
-	private boolean tosChecked;
-	private boolean eulaChecked;
-	
-	//isHuman
+	@NotNull
+	protected String message;
 }

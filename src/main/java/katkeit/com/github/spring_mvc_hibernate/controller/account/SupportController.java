@@ -1,16 +1,15 @@
-package katkeit.com.github.spring_mvc_hibernate.model.entity.account;
+package katkeit.com.github.spring_mvc_hibernate.controller.account;
 
-import java.util.HashMap;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import katkeit.com.github.spring_mvc_hibernate.model.entity.account.support.SupportTicket;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13 
+ * date: 2023-05-23
  *
  * license: Apache License 2.0
  * description:
@@ -26,25 +25,13 @@ import lombok.Setter;
  *		limitations under the License.
  */
 
-@Getter @Setter @NoArgsConstructor
-public class AccountRecovery extends Account
+@Controller
+public class SupportController
 {
-	// --- Username Recovery ---
-	// Required: Birthday
-	// Required: Email
-	
-	// --- Password Recovery ---
-	// Required: Username
-	// Required: Email
-	
-	// username
-	// password
-	
-	@NotNull
-	private String reEnterPassword;
-	
-	// email
-	// birthMonth
-	// birthDay
-	// isHuman
+	@RequestMapping("support")
+	public String support(Model model)
+	{
+		model.addAttribute("supportTicket", new SupportTicket());
+		return "support";
+	}
 }

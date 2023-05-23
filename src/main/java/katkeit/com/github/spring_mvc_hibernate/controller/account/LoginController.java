@@ -1,16 +1,15 @@
-package katkeit.com.github.spring_mvc_hibernate.controller;
+package katkeit.com.github.spring_mvc_hibernate.controller.account;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import katkeit.com.github.spring_mvc_hibernate.model.pages.HomePage;
-import katkeit.com.github.spring_mvc_hibernate.utility.ServerDateTime;
+import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountLogin;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13
+ * date: 2023-02-13 
  *
  * license: Apache License 2.0
  * description:
@@ -27,18 +26,12 @@ import katkeit.com.github.spring_mvc_hibernate.utility.ServerDateTime;
  */
 
 @Controller
-public class HomePageController
+public class LoginController
 {
-	@RequestMapping("/")
-	public String handler(Model model)
+	@RequestMapping("login")
+	public String login(Model model)
 	{
-		HomePage homePage = new HomePage();
-		
-		homePage.setMessage("Spring 5 MVC Hibernate Demo - Home Page");
-		homePage.setDate(ServerDateTime.getServerDate());
-		homePage.setTime(ServerDateTime.getServerTime());
-		model.addAttribute("homePage", homePage);
-		
-		return "home-page";
+		model.addAttribute("accountLogin", new AccountLogin());
+		return "login";
 	}
 }
