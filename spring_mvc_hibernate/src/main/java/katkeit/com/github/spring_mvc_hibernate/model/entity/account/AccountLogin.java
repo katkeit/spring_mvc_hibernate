@@ -1,8 +1,5 @@
 package katkeit.com.github.spring_mvc_hibernate.model.entity.account;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
@@ -22,8 +19,35 @@ import lombok.Setter;
  *		limitations under the License.
  */
 
-@Getter @Setter
 public class AccountLogin extends Account
 {
-	// Getters and Setters.
+	@Override
+	public String getUsername() {
+		return super.getUsername();
+	}
+
+	@Override
+	public void setUsername(String username) {
+		super.setUsername(username);
+	}
+
+	@Override
+	public String getPassword() {
+		return super.getPassword();
+	}
+
+	@Override
+	public void setPassword(String password) {
+		super.setPassword(password);
+	}
+
+	@Override
+	public Boolean getIsHuman() {
+		return super.getIsHuman();
+	}
+
+	@Override
+	public void setIsHuman(Boolean isHuman) {
+		super.setIsHuman(isHuman);
+	}
 }

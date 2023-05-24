@@ -32,6 +32,6 @@ public class RecoveryController
 	public String recover(Model model)
 	{
 		model.addAttribute("accountRecovery", new AccountRecovery());
-		return "account-recovery-page";
+		return "recovery";
 	}
 }

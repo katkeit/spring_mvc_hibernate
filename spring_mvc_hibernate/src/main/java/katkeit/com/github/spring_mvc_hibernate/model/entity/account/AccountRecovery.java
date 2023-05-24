@@ -2,6 +2,7 @@ package katkeit.com.github.spring_mvc_hibernate.model.entity.account;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /*
@@ -23,6 +24,7 @@ import lombok.Setter;
  *		limitations under the License.
  */
 
+@NoArgsConstructor
 @Getter @Setter
 public class AccountRecovery extends Account
 {
@@ -44,8 +46,4 @@ public class AccountRecovery extends Account
 	// birthMonth
 	// birthDay
 	// isHuman
-	
-	public AccountRecovery() {
-		super();
-	}
 }

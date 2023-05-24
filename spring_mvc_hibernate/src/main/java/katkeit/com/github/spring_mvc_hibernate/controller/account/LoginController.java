@@ -27,15 +27,11 @@ import katkeit.com.github.spring_mvc_hibernate.model.entity.account.AccountLogin
 
 @Controller
 public class LoginController
-{
-	// ../spring_mvc_hibernate/login
-	// ../spring_mvc_hibernate/register
-	// ../spring_mvc_hibernate/account-recovery
-	
-	@RequestMapping("/login")
+{	
+	@RequestMapping("login")
 	public String login(Model model)
 	{
 		model.addAttribute("accountLogin", new AccountLogin());
-		return "login-page";
+		return "login";
 	}
 }

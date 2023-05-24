@@ -39,6 +39,6 @@ public class HomePageController
 		homePage.setTime(ServerDateTime.getServerTime());
 		
 		model.addAttribute("homePage", homePage);
-		return "home-page";
+		return "home";
 	}
 }
