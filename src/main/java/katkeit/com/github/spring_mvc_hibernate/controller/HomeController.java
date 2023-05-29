@@ -27,7 +27,7 @@ import katkeit.com.github.spring_mvc_hibernate.utility.ServerDateTime;
  */
 
 @Controller
-public class HomePageController
+public class HomeController
 {
 	@RequestMapping("/")
 	public String handler(Model model)
