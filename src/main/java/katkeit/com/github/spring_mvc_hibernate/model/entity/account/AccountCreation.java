@@ -1,23 +1,20 @@
 package katkeit.com.github.spring_mvc_hibernate.model.entity.account;
 
-import java.util.HashMap;
-
 import org.hibernate.validator.constraints.Range;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13
- *
- * github: 
+ * date: 2023-02-22
  *
  * license: Apache License 2.0
  * description:
- *		Copyright 2023 Katelyn Eitel 
+ *		Copyright 2023 Katelyn Eitel
  * 		Licensed under the Apache License, Version 2.0 (the "License");
  * 		you may not use this file except in compliance with the License.
  * 		You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -29,18 +26,19 @@ import lombok.Setter;
  *		limitations under the License.
  */
 
+@NoArgsConstructor
 @Getter @Setter
 public class AccountCreation extends Account
 {
 	// username
 	
 	@Range(min = 2, max = 16, message = "Doesn't meet the length requirement. Length: 2-16")
-	private String displayName;
+	private String profileName;
 	
 	//password
 	
 	@NotNull
-	private String reEnterPassword;
+	private String confirmPassword;
 	
 	// email
 	
@@ -58,9 +56,4 @@ public class AccountCreation extends Account
 	private boolean eulaChecked;
 	
 	//isHuman
-	
-	public AccountCreation()
-	{
-		super();
-	}
 }

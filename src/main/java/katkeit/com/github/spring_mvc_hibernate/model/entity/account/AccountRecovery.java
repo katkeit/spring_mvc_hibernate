@@ -1,17 +1,18 @@
 package katkeit.com.github.spring_mvc_hibernate.model.entity.account;
 
-import java.util.HashMap;
-
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13 
+ * date: 2023-02-22
  *
  * license: Apache License 2.0
  * description:
- *		Copyright 2023 Katelyn Eitel 
+ *		Copyright 2023 Katelyn Eitel
  * 		Licensed under the Apache License, Version 2.0 (the "License");
  * 		you may not use this file except in compliance with the License.
  * 		You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -23,6 +24,8 @@ import jakarta.validation.constraints.NotNull;
  *		limitations under the License.
  */
 
+@NoArgsConstructor
+@Getter @Setter
 public class AccountRecovery extends Account
 {
 	// --- Username Recovery ---
@@ -43,86 +46,4 @@ public class AccountRecovery extends Account
 	// birthMonth
 	// birthDay
 	// isHuman
-	
-	public AccountRecovery() {
-		super();
-	}
-
-	@Override
-	public String getUsername() {
-		return super.getUsername();
-	}
-
-	@Override
-	public void setUsername(String username) {
-		super.setUsername(username);
-	}
-
-	@Override
-	public String getPassword() {
-		return super.getPassword();
-	}
-
-	@Override
-	public void setPassword(String password) {
-		super.setPassword(password);
-	}
-
-	public String getReEnterPassword() {
-		return reEnterPassword;
-	}
-
-	public void setReEnterPassword(String reEnterPassword) {
-		this.reEnterPassword = reEnterPassword;
-	}
-
-	@Override
-	public String getEmail() {
-		return super.getEmail();
-	}
-
-	@Override
-	public void setEmail(String email) {
-		super.setEmail(email);
-	}
-
-	@Override
-	public Integer getBirthMonth() {
-		return super.getBirthMonth();
-	}
-
-	@Override
-	public void setBirthMonth(Integer birthMonth) {
-		super.setBirthMonth(birthMonth);
-	}
-
-	@Override
-	public Integer getBirthDay() {
-		return super.getBirthDay();
-	}
-
-	@Override
-	public void setBirthDay(Integer birthDay) {
-		super.setBirthDay(birthDay);
-	}
-
-	@Override
-	public Boolean getIsHuman() {
-		return super.getIsHuman();
-	}
-
-	@Override
-	public void setIsHuman(Boolean isHuman) {
-		super.setIsHuman(isHuman);
-	}
-
-	@Override
-	public HashMap<Integer, String> getMonthOptions() {
-		return super.getMonthOptions();
-	}
-
-	@Override
-	public HashMap<String, Integer[]> getDayOptions() {
-		return super.getDayOptions();
-	}
 }

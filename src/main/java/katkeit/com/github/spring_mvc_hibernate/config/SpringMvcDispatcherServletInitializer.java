@@ -5,11 +5,11 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 /*
  * author: Katelyn Eitel
  * project: spring_mvc_hibernate
- * date: 2023-02-13 
+ * date: 2023-02-22
  *
  * license: Apache License 2.0
  * description:
- *		Copyright 2023 Katelyn Eitel 
+ *		Copyright 2023 Katelyn Eitel
  * 		Licensed under the Apache License, Version 2.0 (the "License");
  * 		you may not use this file except in compliance with the License.
  * 		You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -23,7 +23,6 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
 {
-
 	/**
 	 * Retrieves any configuration classes that are not needed
 	 * for web or WebServlet.
@@ -31,7 +30,7 @@ public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationCon
 	@Override
 	protected Class<?>[] getRootConfigClasses()
 	{
-		return null;
+		return new Class[] { HibernateConfig.class };
 	}
 
 	/**
